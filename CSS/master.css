@@ -5,6 +5,9 @@
     --dorduncu-renk: #57D1B9;
     --besinci-renk: #9D69DD;
     --text-renk: #666;
+    --ana-padding-top: 50px;
+    --ana-padding-bottom: 50px;
+    --ana-transition: 0.3s
 }
 
 * {
@@ -85,6 +88,10 @@ a {
 
 /* Header Başlangiç */
 
+header {
+    height: 62px;
+}
+
 header nav .logo {
     color: black;
     font-weight: bold;
@@ -95,6 +102,12 @@ header nav .logo {
     letter-spacing: 1px;
     padding-right: 20px;
     border-right: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+    header nav .toggle-menu {
+        display: none;
+    }
 }
 
 header nav div ul {
@@ -110,14 +123,53 @@ header nav ul li a {
     font-size: 16px;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li a.active {
     color: var(--ana-renk);
 }
 
+@media (max-width: 767px) {
+    header nav div {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    header nav .toggle-menu:hover+ul {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(33 33 33 / 90%);
+    }
+
+    header nav ul li {
+        padding: 15px !important;
+    }
+
+    header nav ul li:last-child {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        padding: 15px !important;
+        color: white;
+    }
+}
+
+.ana-title {
+    font-size: 30px;
+    margin: 0;
+}
+
 /* Header Bitiş */
+/* Ana Sayfa Başlangiç */
 /* Landing Başlangiç */
 .landing {
-    height: calc(100vh - 65px);
+    height: calc(100vh - 62px);
 }
 
 .landing .info h1 {
@@ -136,22 +188,102 @@ header nav ul li a:hover {
     .landing .container {
         flex-direction: column;
     }
+
     .landing .info h1 {
         font-size: 30px;
         margin-top: 40px;
     }
+
     .landing .info p {
         font-size: 16px;
     }
+
     .landing .info {
         text-align: center;
     }
 }
+
 .landing .img {
     max-width: 550px;
     max-height: 550px;
     margin-left: 20px;
 }
-/* Landing Bitiş */
 
-/* Ana Sayfa Başlangiç */
+/* Landing Bitiş */
+/* Projelerim Başlangiç */
+.projelerim {
+    padding-top: var(--ana-padding-top);
+    padding-bottom: var(--ana-padding-bottom);
+}
+
+.projelerim .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.projelerim .container .box {
+    overflow: hidden;
+    position: relative;
+}
+
+.projelerim .container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: var(--ana-transition);
+}
+
+.projelerim .container .box:hover::before {
+    background-color: rgb(33 33 33 / 60%);;
+}
+
+.projelerim .container .box img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.projelerim .container .box .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    z-index: 999;
+    opacity: 0;
+    transition: var(--ana-transition);
+}
+
+.projelerim .container .box .info h3 {
+    color: var(--ikincil-renk);
+}
+
+.projelerim .container .box:hover > .info {
+    left: 50px;
+    opacity: 1;
+}
+
+.projelerim .container .info a {
+    display: inline-block;
+    margin: 0 0 10px 20px;
+}
+
+.projelerim .container .info a i {
+    padding-left: 10px;
+}
+
+.projelerim .container .info .git-hub {
+    background-color: #4078c0;
+}
+
+.projelerim .container .info .visit {
+    background-color: var(--ikincil-renk);
+}
+
+/* Projelerim Bitiş */
+/* Ana Sayfa Bitiş */
+/* 0px 4px 12px 0px rgba(36,39,46,0.1) */

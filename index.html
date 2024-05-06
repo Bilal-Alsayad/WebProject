@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +12,29 @@
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Ana Sayfa</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav class="between-flex p-10 h-full">
                 <div class="d-flex align-center">
                     <a class="logo" href="index.html">AVCI</a>
-                    <ul class="m-0 d-flex">
+                    <i class="fas fa-bars fa-2x toggle-menu"></i>
+                    <ul class="m-0 d-flex hide-mobile">
                         <li><a href="ozgecmis.html">Özgeçmiş</a></li>
                         <li><a href="sehrim.html">Şehrim</a></li>
                         <li><a href="mirasimiz.html">Mirasımız</a></li>
                         <li><a href="ilgi.html">İlgi alanlarım</a></li>
                         <li><a href="iletisim.html">İletişim sayfası</a></li>
+                        <li class="d-none"><a class="btn-shape c-white bg-blue" href="login.html">Giriş Yap</a></li>
                     </ul>
                 </div>
-                <a class="btn-shape c-white bg-blue" href="login.html">Giriş Yap</a>
+                <a class="btn-shape c-white bg-blue hide-mobile" href="login.html">Giriş Yap</a>
             </nav>
         </div>
     </header>
@@ -39,10 +45,55 @@
                 <P>Sakarya Üniversitesi'nde bilgisayar mühendisliği okuyorum</P>
             </div>
             <div class="img">
-                <img class="w-full h-full"src="images/Developer activity-bro.png" alt="fotoğraf">
+                <img class="w-full h-full" src="images/Developer activity-bro.png" alt="fotoğraf">
+            </div>
+        </div>
+    </section>
+    <section class="projelerim">
+        <div class="txt-c">
+            <h2 class="ana-title">Son Projelerim</h2>
+            <img src="images/lines.svg" alt="çizgiler">
+        </div>
+        <div class="container">
+            <div class="box rad-6">
+                <img src="images/Proje1.png" alt="site-1">
+                <div class="info">
+                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 1</h3>
+                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white" >Leon<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-1.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-1/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="box rad-6">
+                <img src="images/Proje2.png" alt="site-2">
+                <div class="info">
+                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 2</h3>
+                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Kasper<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-2.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-2/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="box rad-6">
+                <img src="images/Proje3.png" alt="site-3">
+                <div class="info">
+                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 3</h3>
+                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Elzero<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-3.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-3/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="box rad-6">
+                <img src="images/Proje4.png" alt="site-3">
+                <div class="info">
+                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 4</h3>
+                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Elzero<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-4.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-4/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
             </div>
         </div>
     </section>
     <script></script>
 </body>
+
 </html>

@@ -148,6 +148,12 @@
     margin-bottom: 20px;
 }
 
+.ml-20 {
+    margin-left: 20px;
+}
+
+
+
 
 /* End Padding and Margin */
 /* Start Color */
@@ -168,7 +174,7 @@
 }
 
 .bg-grey {
-    background-color: grey;
+    background-color: var(--text-renk);
 }
 
 .c-black {
@@ -176,7 +182,7 @@
 }
 
 .c-grey {
-    color: grey;
+    color: var(--text-renk);
 }
 
 .c-white {
