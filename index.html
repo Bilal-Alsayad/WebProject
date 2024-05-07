@@ -7,7 +7,7 @@
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="CSS/all.min.css">
     <!-- CSS Dosyaları -->
-    <link rel="stylesheet" href="CSS/framework.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/master.css">
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,79 +21,100 @@
 <body>
     <header>
         <div class="container">
-            <nav class="between-flex p-10 h-full">
-                <div class="d-flex align-center">
-                    <a class="logo" href="index.html">AVCI</a>
-                    <i class="fas fa-bars fa-2x toggle-menu"></i>
-                    <ul class="m-0 d-flex hide-mobile">
-                        <li><a href="ozgecmis.html">Özgeçmiş</a></li>
-                        <li><a href="sehrim.html">Şehrim</a></li>
-                        <li><a href="mirasimiz.html">Mirasımız</a></li>
-                        <li><a href="ilgi.html">İlgi alanlarım</a></li>
-                        <li><a href="iletisim.html">İletişim sayfası</a></li>
-                        <li class="d-none"><a class="btn-shape c-white bg-blue" href="login.html">Giriş Yap</a></li>
+            <nav class="navbar navbar-expand-lg">
+                <a class="logo" href="index.html">AVCI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sehrim.html">Şehrim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="iletisim.html">İlgi alanlarım</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ilgi.html">İletişim sayfası</a>
+                        </li>
                     </ul>
+                    <a href="login.html">Giriş Yap</a>
                 </div>
-                <a class="btn-shape c-white bg-blue hide-mobile" href="login.html">Giriş Yap</a>
             </nav>
         </div>
     </header>
     <section class="landing">
-        <div class="container between-flex">
+        <div class="container">
             <div class="info">
                 <h1>Merhaba! Ben Bilal, Öğrenciyim</h1>
                 <P>Sakarya Üniversitesi'nde bilgisayar mühendisliği okuyorum</P>
             </div>
             <div class="img">
-                <img class="w-full h-full" src="images/Developer activity-bro.png" alt="fotoğraf">
+                <img src="images/Developer activity-bro.png" alt="fotoğraf">
             </div>
         </div>
     </section>
     <section class="projelerim">
-        <div class="txt-c">
+        <div class="title">
             <h2 class="ana-title">Son Projelerim</h2>
             <img src="images/lines.svg" alt="çizgiler">
         </div>
         <div class="container">
-            <div class="box rad-6">
+            <div class="box">
                 <img src="images/Proje1.png" alt="site-1">
                 <div class="info">
-                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 1</h3>
-                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white" >Leon<br><span>HTML, CSS</span></p>
-                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-1.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
-                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-1/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <h3>Proje 1</h3>
+                    <p>Leon<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-1.git"
+                        target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn" href="https://bilal-alsayad.github.io/Template-1/"
+                        target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="box rad-6">
+            <div class="box">
                 <img src="images/Proje2.png" alt="site-2">
                 <div class="info">
-                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 2</h3>
-                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Kasper<br><span>HTML, CSS</span></p>
-                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-2.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
-                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-2/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <h3>Proje 2</h3>
+                    <p>Kasper<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-2.git"
+                        target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn" href="https://bilal-alsayad.github.io/Template-2/"
+                        target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="box rad-6">
+            <div class="box">
                 <img src="images/Proje3.png" alt="site-3">
                 <div class="info">
-                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 3</h3>
-                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Elzero<br><span>HTML, CSS</span></p>
-                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-3.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
-                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-3/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <h3>Proje 3</h3>
+                    <p>Elzero<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-3.git"
+                        target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn" href="https://bilal-alsayad.github.io/Template-3/"
+                        target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="box rad-6">
+            <div class="box">
                 <img src="images/Proje4.png" alt="site-3">
                 <div class="info">
-                    <h3 class="mt-0 mb-5 ml-20 c-white">Proje 4</h3>
-                    <p class="mt-0 c-grey ml-20 fs-15 mb-10 c-white">Elzero<br><span>HTML, CSS</span></p>
-                    <a class="git-hub btn-shape c-white" href="https://github.com/Bilal-Alsayad/Template-4.git" target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
-                    <a class="visit btn-shape c-white" href="https://bilal-alsayad.github.io/Template-4/" target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
+                    <h3>Proje 4</h3>
+                    <p>Elzero<br><span>HTML, CSS</span></p>
+                    <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-4.git"
+                        target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                    <a class="visit btn" href="https://bilal-alsayad.github.io/Template-4/"
+                        target="_blank">Siteye<i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    <script></script>
+    <script src="JS/bootstrap.js"></script>
 </body>
 
 </html>

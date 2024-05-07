@@ -37,7 +37,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif !important;
     margin: 0;
 }
 
@@ -104,63 +104,65 @@ header nav .logo {
     border-right: 1px solid #ccc;
 }
 
-@media (min-width: 768px) {
-    header nav .toggle-menu {
-        display: none;
-    }
+header .container nav .navbar-toggler {
+    border: none;
 }
 
-header nav div ul {
-    padding-left: 20px;
+header .container nav .navbar-toggler:focus {
+    box-shadow: none;
 }
 
-header nav ul li {
-    padding: 1px 12px;
+header .container nav div ul li {
+    padding: 0 12px;
 }
 
-header nav ul li a {
+header .container nav div ul li a {
     color: #424856;
     font-size: 16px;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
+header .container nav div ul li a:hover,
+header .container nav div ul li a.active {
     color: var(--ana-renk);
 }
 
-@media (max-width: 767px) {
-    header nav div {
-        flex: 1;
-        justify-content: space-between;
-    }
-
-    header nav .toggle-menu:hover+ul {
-        display: flex;
+@media (max-width: 991px) {
+    header .container nav div {
         text-align: center;
-        flex-direction: column;
-        position: absolute;
-        top: 62px;
-        left: 0;
-        width: 100%;
-        background-color: rgb(33 33 33 / 90%);
+        background-color: rgb(30 100 221 / 90%);
+        height: 245px;
     }
-
-    header nav ul li {
-        padding: 15px !important;
+    header .container nav div ul li a{
+        border-bottom: 1px solid #eee;
     }
-
-    header nav ul li:last-child {
-        display: block;
-        margin-bottom: 10px;
+    header .container nav div ul li a {
+        color: white;
     }
-
-    header nav ul li a {
-        padding: 15px !important;
+    header .container nav div ul li a:hover {
         color: white;
     }
 }
 
-.ana-title {
+header .container nav div > a {
+    color: white;
+    background-color: var(--ana-renk);
+    margin-bottom: 5px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+    header .container nav div > a {
+        background-color: transparent;
+        }
+}
+
+
+div.title {
+    text-align: center;
+}
+
+.tilte .ana-title {
     font-size: 30px;
     margin: 0;
 }
@@ -169,22 +171,30 @@ header nav ul li a.active {
 /* Ana Sayfa Başlangiç */
 /* Landing Başlangiç */
 .landing {
-    height: calc(100vh - 62px);
+    min-height: calc(100vh - 62px);
+}
+
+.landing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .landing .info h1 {
     font-size: 42px;
     line-height: 1.2;
     margin: 0;
+    font-weight: 600;
 }
 
 
 .landing .info p {
     font-size: 22px;
     color: var(--text-renk);
+    margin-top: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .landing .container {
         flex-direction: column;
     }
@@ -203,10 +213,8 @@ header nav ul li a.active {
     }
 }
 
-.landing .img {
-    max-width: 550px;
-    max-height: 550px;
-    margin-left: 20px;
+.landing .img img {
+    width: 100%;
 }
 
 /* Landing Bitiş */
@@ -226,6 +234,7 @@ header nav ul li a.active {
 .projelerim .container .box {
     overflow: hidden;
     position: relative;
+    border-radius: 6px;
 }
 
 .projelerim .container .box::before {
@@ -240,7 +249,7 @@ header nav ul li a.active {
 }
 
 .projelerim .container .box:hover::before {
-    background-color: rgb(33 33 33 / 60%);;
+    background-color: rgb(33 33 33 / 60%);
 }
 
 .projelerim .container .box img {
@@ -255,11 +264,8 @@ header nav ul li a.active {
     left: 0px;
     z-index: 999;
     opacity: 0;
+    margin-left: 30px;
     transition: var(--ana-transition);
-}
-
-.projelerim .container .box .info h3 {
-    color: var(--ikincil-renk);
 }
 
 .projelerim .container .box:hover > .info {
@@ -267,9 +273,20 @@ header nav ul li a.active {
     opacity: 1;
 }
 
+.projelerim .container .box .info h3 {
+    color: var(--ikincil-renk);
+    margin-bottom: 5px;
+}
+
+.projelerim .container .box .info p {
+    margin-top: 0;
+    color: white;
+}
+
 .projelerim .container .info a {
     display: inline-block;
-    margin: 0 0 10px 20px;
+    color: white;
+    font-size: 16px;
 }
 
 .projelerim .container .info a i {
@@ -282,6 +299,7 @@ header nav ul li a.active {
 
 .projelerim .container .info .visit {
     background-color: var(--ikincil-renk);
+    margin-left: 15px;
 }
 
 /* Projelerim Bitiş */
