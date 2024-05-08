@@ -87,10 +87,9 @@ a {
 }
 
 /* Header Başlangiç */
-
 header {
     height: 62px;
-    position: fixed;
+    /* position: fixed; */
     background-color: white;
     width: 100%;
     z-index: 10;
@@ -173,6 +172,57 @@ div.title {
 }
 
 /* Header Bitiş */
+/* Footer Başlangiç */
+footer {
+    background-color: #1e2128;
+    margin: 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+footer .container .box {
+    margin: 30px 0 30px 50px;
+}
+
+@media (max-width: 767px) {
+    footer .container .box {
+        text-align: center;
+    }
+}
+
+footer .container .box h3 {
+    font-size: 42px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+footer .container .box div a {
+    color: white;
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+footer .container .box .facebook:hover {
+    color: #1877f2;
+}
+footer .container .box .instagram:hover {
+    color: #e1306c;
+}
+footer .container .box .github:hover {
+    color: #4078c0;
+}
+footer .container p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid #bdc1ca;
+}
+
+/* Footer Bitiş */
 /* Ana Sayfa Başlangiç */
 /* Landing Başlangiç */
 .landing {
@@ -345,48 +395,113 @@ div.title {
 
 /* Beceriler ve Hobiler Bitiş */
 /* Ana Sayfa Bitiş */
-/* Footer Başlangiç */
-footer {
-    background-color: #1e2128;
-    margin: 0;
+/* Login Sayfa Başlangiç */
+.giris-sayfa {
+    display: flex;
+    height: 100vh;
 }
 
-footer .container {
+.giris-sayfa .logo {
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: 100px;
+    top: 8px;
+}
+
+.giris-sayfa div {
+    flex-basis: 50%;
+}
+
+.giris-sayfa div.login {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
-footer .container .box  {
-    margin: 30px 0 30px 50px;
-}
 
-footer .container .box h3 {
-    font-size: 42px;
-    color: white;
+.giris-sayfa div.login h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
-footer .container .box div a {
-    color: white;
-    font-size: 30px;
-    margin-right: 30px;
+.giris-sayfa div.login form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-footer .container .box .facebook:hover {
-    color: #1877f2;
+.giris-sayfa div.login form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 52px;
+    background-color: #F3F4F6FF;
+    border-radius: 8px;
+    padding: 2px 12px;
+    margin-bottom: 25px;
 }
-footer .container .box .instagram:hover {
-    color: #e1306c;
+
+.giris-sayfa div.login form div label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #424856;
 }
-footer .container .box .github:hover {
-    color: #4078c0;
+
+.giris-sayfa div.login form div input {
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
-footer .container p {
+
+.giris-sayfa div.login form div input::placeholder {
+    color: #BDC1CAFF;
+}
+
+.giris-sayfa div.login form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--ana-renk);
     color: white;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    border-top: 1px solid #bdc1ca;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
 }
-/* Footer Bitiş */
-/* 0px 4px 12px 0px rgba(36,39,46,0.1) */
+
+.giris-sayfa div.login form input[type="submit"]:hover {
+    background-color: #1851b2ff;
+}
+
+.giris-sayfa div.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ana-renk);
+}
+
+.giris-sayfa div img {
+    width: 400px;
+    height: 400px;
+}
+
+@media (max-width: 767px) {
+    .giris-sayfa {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .giris-sayfa .logo {
+        left: 10px;
+        top: 8px;
+        font-size: 32px;
+    }
+    .giris-sayfa div.login form {
+        width: 70%;
+    }
+    .giris-sayfa div.img {
+        display: none;
+    }
+}
+/* Login Sayfa Bitiş */
