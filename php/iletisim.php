@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../CSS/master.css">
     <title>Document</title>
 </head>
-    <body style = "height: 100vh; display: flex; flex-direction: column;">
+    <body style="height: 100vh; display: flex; flex-direction: column;">
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
@@ -35,23 +35,47 @@
                                 <a class="nav-link" href="../iletisim.html">İletişim sayfası</a>
                             </li>
                         </ul>
+                        <a href="../login.html">Giriş Yap</a>
                     </div>
                 </nav>
             </div>
         </header>
-        <section style = "height: 100%; display: flex; text-align: center; justify-content: center; flex-direction: column;">
+        <section style = "height: 100%; display: flex; justify-content: center; flex-direction: column;">
             <div class="container">
                 <?php 
-                    if ($_POST["mail"] == "b221210552@sakarya.edu.tr" && $_POST["pass"] == "b221210552") 
-                    {
-                        echo "<h1>Hoşgeldin Bilal Alsayad</h1>";
-                        echo "<h3><br>Girişin Onaylandı.</h3>";
-                    } 
-                    else 
-                    {
-                        echo "<h1>Kullanıcı epostası yada şifre hatalı</h1>";
-                        header("refresh:3; ../login.html");
-                    }
+                    echo 
+                    "<table style = 'font-size: 20px;'>
+                        <tr>
+                            <td>Ad</td>
+                            <td>:</td>
+                            <td>" .$_POST["ad"]. "</td>
+                        </tr>
+                        <tr>
+                            <td>Soyadı</td>
+                            <td>:</td>
+                            <td>" .$_POST["sayad"]. "</td>
+                        </tr>
+                        <tr>
+                            <td>E-Posta</td>
+                            <td>:</td>
+                            <td>" .$_POST["mail"]. "</td>
+                        </tr>
+                        <tr>
+                            <td>Telefon</td>
+                            <td>:</td>
+                            <td>" .$_POST["telefon"]. "</td>
+                        </tr>
+                        <tr>
+                            <td>Konu</td>
+                            <td>:</td>
+                            <td>" .$_POST["konu"]. "</td>
+                        </tr>
+                        <tr>
+                            <td>Mesaj</td>
+                            <td>:</td>
+                            <td>" .$_POST["mesaj"]. "</td>
+                        </tr>
+                    </table>"
                 ?>
             </div>
         </section>
