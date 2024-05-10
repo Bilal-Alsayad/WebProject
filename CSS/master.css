@@ -1,5 +1,6 @@
 :root {
     --ana-renk: #1E64DD;
+    --alt-renk: #379AE6;
     --ikincil-renk: #E2763C;
     --ucuncu-renk: #E34A64;
     --dorduncu-renk: #57D1B9;
@@ -7,7 +8,7 @@
     --text-renk: #666;
     --input-bg-renk: rgb(240, 242, 245);
     --label-renk: #424856;
-    --placeholder-renk: #BDC1CAFF;
+    --placeholder-border-renk: #BDC1CAFF;
     --ana-padding-top: 50px;
     --ana-padding-bottom: 50px;
     --ana-transition: 0.3s
@@ -32,7 +33,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #379AE6;
+    background-color: var(--alt-renk);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -169,7 +170,7 @@ div.title {
     text-align: center;
 }
 
-.title .ana-title {
+.ana-title {
     font-size: 30px;
     font-weight: 600;
     margin: 0;
@@ -234,7 +235,7 @@ footer .container p {
     text-align: center;
     margin: 0;
     padding: 10px;
-    border-top: 1px solid #bdc1ca;
+    border-top: 1px solid var(--placeholder-border-renk);
 }
 
 /* Footer Bitiş */
@@ -243,6 +244,7 @@ footer .container p {
 .landing {
     padding-top: calc(var(--ana-padding-top) - 20px);
     padding-bottom: var(--ana-padding-bottom);
+    min-height: calc(100vh - 62px);
 }
 
 .landing .container {
@@ -374,7 +376,7 @@ footer .container p {
 }
 
 /* Projelerim Bitiş */
-/* Beceriler ve Hobiler Başlangiç */
+/* Hobiler Başlangiç */
 .beceriler,
 .hobiler {
     padding-top: var(--ana-padding-top);
@@ -392,7 +394,7 @@ footer .container p {
 .beceriler .container .box,
 .hobiler .container .box {
     display: flex;
-    border-bottom: 1px solid #bdc1ca;
+    border-bottom: 1px solid var(--placeholder-border-renk);
 }
 
 .beceriler .container .box i,
@@ -410,6 +412,187 @@ footer .container p {
 
 /* Beceriler ve Hobiler Bitiş */
 /* Ana Sayfa Bitiş */
+
+/* Özgeçmiş Başlangiç */
+.tanit {
+    padding-top: calc(var(--ana-padding-top));
+    padding-bottom: var(--ana-padding-bottom);
+    min-height: calc(100vh - 62px);
+}
+
+.tanit .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tanit .container div {
+    flex-basis: 50%;
+}
+
+.tanit .container .info {
+    max-width: 500px;
+}
+
+.tanit .container .info h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 600;
+}
+
+.tanit .container .info p {
+    color: var(--text-renk);
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .tanit .container {
+        flex-direction: column-reverse;
+    }
+
+    .tanit .container .info h1 {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+
+    .tanit .container .info {
+        text-align: center;
+    }
+}
+
+.tanit .container .img {
+    display: flex;
+    justify-content: center;
+}
+
+.tanit .container .img img {
+    height: 400px;
+    border-radius: 0 0 300px 300px;
+    /* مؤقت */
+}
+.iletisim-diller {
+    padding-bottom: var(--ana-padding-bottom);
+}
+
+.iletisim-diller .container {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .iletisim-diller .container {
+        flex-direction: column;
+    }
+}
+
+.iletisim-diller .container .ana-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.iletisim-diller .container > div {
+    flex-basis: 50%;
+    padding: 10px 25px;
+}
+
+.iletisim-diller .container .iletisim div,
+.iletisim-diller .container .diller p {
+    padding: 20px 0 20px 10px;
+    font-size: 19px;
+    margin: 0;
+}
+
+.iletisim-diller .container .iletisim div:not(:last-child),
+.iletisim-diller .container .diller p:not(:last-child) {
+    border-bottom: 1px solid var(--placeholder-border-renk);
+}
+
+.iletisim-diller .container .iletisim div i {
+    color: var(--ana-renk);
+    margin-right: 15px;
+}
+
+.egitim {
+    padding-top: calc(var(--ana-padding-top));
+    padding-bottom: var(--ana-padding-bottom);
+}
+
+.egitim .container {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .egitim .container {
+        flex-direction: column;
+    }
+    .egitim .container > div h2 {
+        text-align: center;
+    }
+}
+
+.egitim .container > div {
+    flex-basis: 50%;
+}
+
+.egitim .container div h2 {
+    margin-top: 20px;
+}
+
+.egitim .container .info .box {
+    padding: 20px;
+    border-bottom: 1px solid var(--placeholder-border-renk);
+}
+
+.egitim .container .info .box h4 {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.egitim .container .info .box h4 span {
+    font-size: 13px;
+    color: var(--text-renk);
+}
+
+.egitim .container .info .box p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.yetenekler {
+    padding-top: var(--ana-padding-top);
+    padding-bottom: var(--ana-padding-bottom);
+}
+
+.yetenekler .ana-title {
+    text-align: center;
+}
+
+.yetenekler .contant {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.yetenekler .contant .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yetenekler .contant .box img {
+    width: 67px;
+}
+
+.yetenekler .contant .box p {
+    font-size: 20px;
+    color: var(--text-renk);
+}
+
+/* Özgeçmiş Bitiş */
 
 /* İletişim Sayfa Başlangiç */
 .iletisim-sayfa .container {
