@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/master.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <title>Şehrim</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <section class="slider">
+            <div class="container">
+                <div class="slide">
+                    <a href="#"><img src="images/sam-1.jpg" alt="Emevi Camii"></a>
+                    <div class="text">Emevi Camii</div>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/sam-4.jpg" alt="Eski Şam"></a>
+                    <div class="text">Eski Şam</div>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/sam-3.jpg" alt="Hamidiyei Çarşısı"></a>
+                    <div class="text">El Hamidiye Pazarı</div>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/sam-6.jpg" alt="Azm Sarayı"></a>
+                    <div class="text">Azm Sarayı</div>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/sam-5.jpg" alt="Hicaz Tren Garı"></a>
+                    <div class="text">Hicaz Tren Garı</div>
+                </div>
+                <a class="onceki" onclick="artiSlides(-1)">&#10094;</a>
+                <a class="sonraki" onclick="artiSlides(1)">&#10095;</a>
+            </div>
+        </section>
+        <hr class="sehrim-sayfa-hr">
+        <section class="sehir-sayfa">
+            <div class="container">
+                <div class="box">
+                    <div>
+                        <h1>Şam</h1>
+                        <p>
+                            Şam veya Dimaşk Suriye'nin başkentidir. Arapçada tam olarak Dimeşk eş-Şām (دمشق الشام)
+                            denir.
+                            Genelde Dimeşk kısaltmasıyla hitap edilir fakat Şamlılar başta olmak üzere Araplar eş-Şam
+                            tercih ederler.<br>
+                            2010 nüfus sayımına göre Şam'ın nüfusu 1.724 milyon kişidir.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/sam.jpg" alt="Şam">
+                    </div>
+                </div>
+                <hr class="sehrim-sayfa-hr">
+                <div class="box box-reverse">
+                    <div>
+                        <img src="images/old-city.jpg" alt="Şam">
+                    </div>
+                    <div>
+                        <h1>Trihi</h1>
+                        <p>
+                            Şam, dünyanın en eski sürekli yerleşim yerlerinden biridir ve 10.000 yıldan fazla bir
+                            geçmişe sahiptir. Tarih boyunca birçok farklı uygarlığa ev sahipliği yapmıştır ve önemli bir
+                            ticaret ve kültür merkezi olmuştur. Şam, şu anda UNESCO Dünya Mirası Listesi'nde yer alan
+                            birçok tarihi ve dini mekana ev sahipliği yapmaktadır. <br>
+                            Şam, tarihi boyunca önemli bir ticaret merkezi olmuştur. Şehir, İpek Yolu üzerinde yer
+                            almaktadır ve yüzyıllar boyunca Doğu ile Batı arasındaki ticaretin önemli bir merkezi
+                            olmuştur.
+                        </p>
+                    </div>
+                </div>
+                <hr class="sehrim-sayfa-hr">
+                <div class="row-box">
+                    <div>
+                        <h1>Gezilecek Yerler</h1>
+                        <p>
+                            Şam, tarihi ve dini mekanlarıyla dolu bir şehirdir. Bu mekanlar arasında en çok öne çıkanlar
+                            şunlardır:
+                        </p>
+                        <ul>
+                            <li><span>Şam'ın Eski Şehri: </span>UNESCO Dünya Mirası Listesi'nde yer alan bir açık hava
+                                müzesi.</li>
+                            <li><span>Emevi Camii: </span>Dünyanın en büyük camilerinden biri ve İslam mimarisinin en
+                                önemli örneklerinden biri.</li>
+                            <li><span>El Hamidiye Pazarı: </span>Şam'ın en eski ve en büyük çarşısı ve geleneksel Arap
+                                ürünlerini bulmak için ideal bir yer.</li>
+                            <li><span>Azm Sarayı: </span>Şam'ın görkemli tarihi yapılarından biri ve Osmanlı döneminin
+                                izlerini taşıyor.</li>
+                        </ul>
+                    </div>
+                    <div class="imgs">
+                        <div class="col">
+                            <img src="images/sam-2.jpg" alt="Emevi Camii">
+                        </div>
+                        <div class="col">
+                            <div class="up">
+                                <img src="images/sam-7.jpg" alt="Şam'ın Eski Şehri">
+                            </div>
+                            <div class="down">
+                                <img src="images/sam-8.jpg" alt="El Hamidiye Pazarı">
+                                <img src="images/sam-9.jpeg" alt="Azm Sarayı">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="sehrim-sayfa-hr">
+                <div class="harita">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106456.49873162762!2d36.28289545!3d33.50747549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e6dc413cc6a7%3A0x6b9f66ebd1e394f2!2zxZ5hbSwgU3VyaXll!5e0!3m2!1str!2str!4v1715540460814!5m2!1str!2str"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+    <script src="JS/bootstrap.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function artiSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
