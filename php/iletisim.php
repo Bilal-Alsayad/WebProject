@@ -53,7 +53,7 @@
                         <tr>
                             <td>Soyadı</td>
                             <td>:</td>
-                            <td>" .$_POST["sayad"]. "</td>
+                            <td>" .$_POST["soyad"]. "</td>
                         </tr>
                         <tr>
                             <td>E-Posta</td>

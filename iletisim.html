@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <!-- CSS Dosyaları -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/iletisim.css">
     <link rel="stylesheet" href="CSS/master.css">
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +24,7 @@
             $("#footer").load("footer.html");
         });
     </script>
-    <title>Ana Sayfa</title>
+    <title>İletişim</title>
 </head>
 
 <body>
@@ -37,51 +38,124 @@
                     <p>İletişime geçmek için formu doldurun.</p>
                     <img src="images/iletisim.png" alt="photo">
                 </div>
-                <div class="form">
-                    <form action="php/iletisim.php" method="post">
-                        <div>
-                            <div>
-                                <label for="ad">Adınız</label>
-                                <input type="text" name="ad" id="Ad">
-                            </div>
-                            <div>
-                                <label for="sayad">Soyadınız</label>
-                                <input type="text" name="sayad" id="Sayad">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="mail">E-Posta</label>
-                            <input type="email" name="mail" id="Mail">
-                        </div>
-                        <div>
-                            <label for="telefon">Telefonunuz</label>
-                            <input type="text" name="telefon" id="Telefon">
-                        </div>
-                        <div>
-                            <label for="konu">İhtiyaçlarınıza en uygun konu hangisi?</label>
-                            <select name="konu" id="Konu" aria-placeholder="Lütfen seçin">
-                                <option value="Öneri" disabled selected>Lütfen seçin</option>
-                                <option value="Öneri">Öneri</option>
-                                <option value="Şikayet">Şikayet</option>
-                                <option value="Başka">Başka</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="mesaj">Nasıl yardımcı olabiliriz?</label>
-                            <textarea name="mesaj" id="Mesaj"
-                                placeholder="Lütfen yardımcı olmamızı istediğiniz konuları paylaşın"></textarea>
-                        </div>
-                        <div>
-                            <input type="button" value="Sıfırla">
-                            <input type="submit" value="Gönder">
-                        </div>
-                    </form>
-                </div>
+                <div id='app' class="form"></div>
             </div>
         </section>
     </main>
     <footer id="footer"></footer>
     <script src="JS/bootstrap.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16.14/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.14/umd/react-dom.development.js"></script>
+    <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+    <script type='text/babel'>
+        function MyForm() {
+            const handleSubmit = (event) => {
+                event.preventDefault();
+
+                const Ad = event.target.elements.ad.value.trim();
+                const Soyad = event.target.elements.soyad.value.trim();
+                const Mail = event.target.elements.mail.value.trim();
+                const Telefon = event.target.elements.telefon.value.trim();
+                const Konu = event.target.elements.konu.value.trim();
+                const Mesaj = event.target.elements.mesaj.value.trim();
+
+                let bosArea = "";
+                if (Ad === "") {
+                    bosArea += "Ad, ";
+                }
+                if (Soyad === "") {
+                    bosArea += "Soyad, ";
+                }
+                if (Telefon === "") {
+                    bosArea += "Telefon, ";
+                }
+                if (Mail === "") {
+                    bosArea += "E-Posta, ";
+                }
+                if (Konu === "0") {
+                    bosArea += "İhtiyaçlarınız, ";
+                }
+                if (Mesaj === "") {
+                    bosArea += "Mesaj  ";
+                }
+
+                if (bosArea) {
+                    const trimmedEmptyFields = bosArea.slice(0, -2);
+                    alert("Lütfen şu zorunlu alanları doldurun: " + trimmedEmptyFields);
+                    return;
+                }
+                if (!Telefon.match(/^\d+$/)) {
+                    alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                    return;
+                }
+
+                event.target.submit();
+            };
+            return <form
+                onSubmit={handleSubmit}
+                action="php/iletisim.php"
+                method="post"
+            >
+                <div>
+                    <label>Adınız
+                        <input
+                            type="text"
+                            name="ad"
+                            required
+                        />
+                    </label>
+                    <label>Soyadınız
+                        <input
+                            type="text"
+                            name="soyad"
+                            required
+                        />
+                    </label>
+                </div>
+                <label>E-Posta
+                    <input
+                        type="email"
+                        name="mail"
+                        required
+                    />
+                </label>
+                <label>Telefonunuz
+                    <input
+                        type="text"
+                        name="telefon"
+                        required
+                    />
+                </label>
+                <label>İhtiyaçlarınıza en uygun konu hangisi?
+                    <select
+                        name="konu"
+                    >
+                        <option value="0" disabled selected>Lütfen seçin</option>
+                        <option value="Öneri">Öneri</option>
+                        <option value="Şikayet">Şikayet</option>
+                        <option value="Başka">Başka</option>
+                    </select>
+                </label>
+                <label>Nasıl yardımcı olabiliriz?
+                    <textarea
+                        name="mesaj"
+                        placeholder='Lütfen yardımcı olmamızı istediğiniz konuları paylaşın'
+                        required
+                    >
+                    </textarea>
+                </label>
+                <div className='div'>
+                    <button className='sifirla' type="reset">Sıfırla</button>
+                    <button className='gonder' type="submit">Gönder</button>
+                </div>
+            </form>
+        }
+
+        ReactDOM.render(
+            <MyForm />,
+            document.getElementById('app')
+        )
+    </script>
 </body>
 
 </html>
