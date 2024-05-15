@@ -771,6 +771,63 @@ footer .container p {
 
 /* Şehrim Sayfa Bitiş */
 
+/* Mirasımız Sayfa Başlangiç */
+
+
+/* Mirasımız Sayfa Bitiş */
+
+/* İlgi alanlarım Sayfa Başlangiç */
+.ilgi-alan-sayfa h1 {
+    margin: 20px;
+}
+
+.ilgi-alan-sayfa .filmler {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.ilgi-alan-sayfa .filmler figure {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+}
+
+.ilgi-alan-sayfa .filmler figure img {
+    width: 100%;
+    height: 300px;
+}
+
+.ilgi-alan-sayfa .filmler figure h5 {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.ilgi-alan-sayfa .filmler figure p {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+}
+.ilgi-alan-sayfa .filmler figure p span {
+    color: #777;
+}
+
+.ilgi-alan-sayfa .container button {
+    position: relative;
+    margin: 25px auto;
+    color: white;
+    background-color: var(--ana-renk);
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* İlgi alanlarım Sayfa Bitiş */
+
 /* İletişim Sayfa Başlangiç */
 .iletisim-sayfa .container {
     position: relative;

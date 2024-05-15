@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/all.min.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/master.css">
-    <title>Document</title>
+    <title>Hoşgeldiniz</title>
 </head>
     <body style = "height: 100vh; display: flex; flex-direction: column;">
         <header>
@@ -42,9 +43,9 @@
         <section style = "height: 100%; display: flex; text-align: center; justify-content: center; flex-direction: column;">
             <div class="container">
                 <?php 
-                    if ($_POST["mail"] == "b221210552@sakarya.edu.tr" && $_POST["pass"] == "b221210552") 
+                    if ($_POST["mail"] == "g221210552@sakarya.edu.tr" && $_POST["pass"] == "g221210552") 
                     {
-                        echo "<h1>Hoşgeldin Bilal Alsayad</h1>";
+                        echo "<h1>Hoşgeldiniz Bilal Alsayad</h1>";
                         echo "<h3><br>Girişin Onaylandı.</h3>";
                     } 
                     else 
@@ -65,5 +66,6 @@
                 <p>&copy; 2024 Bilal Alsayad</p>
             </div>
         </footer>
+        <script src="../JS/bootstrap.js"></script>
     </body>
 </html>
