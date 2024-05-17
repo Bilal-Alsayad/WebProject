@@ -84,8 +84,17 @@
                     alert("Lütfen şu zorunlu alanları doldurun: " + trimmedEmptyFields);
                     return;
                 }
+                if (!Mail.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                    alert('Lütfen geçerli bir email adresi giriniz.');
+                    return;
+                }
+
                 if (!Telefon.match(/^\d+$/)) {
                     alert("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                    return;
+                }
+                if (!Telefon.match(/^\d{11}$/)) {
+                    alert('Lütfen geçerli bir telefon numarası giriniz.');
                     return;
                 }
 
@@ -117,6 +126,7 @@
                         type="email"
                         name="mail"
                         required
+                        placeholder='XXX@XXX.XXX'
                     />
                 </label>
                 <label>Telefonunuz
@@ -124,6 +134,7 @@
                         type="text"
                         name="telefon"
                         required
+                        placeholder='05XXXXXXXXX'
                     />
                 </label>
                 <label>İhtiyaçlarınıza en uygun konu hangisi?
@@ -145,7 +156,15 @@
                     </textarea>
                 </label>
                 <div className='div'>
-                    <button className='sifirla' type="reset">Sıfırla</button>
+                    <button className='sifirla' type="reset"
+                        onClick={() => setFormData({
+                            ad: '',
+                            soyad: '',
+                            mail: '',
+                            telefon: '',
+                            konu: '',
+                            mesaj: ''
+                        })}>Sıfırla</button>
                     <button className='gonder' type="submit">Gönder</button>
                 </div>
             </form>

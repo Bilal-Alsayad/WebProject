@@ -56,7 +56,7 @@
                 .then(data => {
                     data.results.map(function (film) {
                         list.innerHTML += ` <figure>
-                                    <img src="http://image.tmdb.org/t/p/w500/${film.poster_path}" alt="">
+                                    <a href="https://www.themoviedb.org/movie/${film.id}?language=tr" target="_blank"><img src="http://image.tmdb.org/t/p/w500/${film.poster_path}" alt=""></a>
                                     <figcaption>
                                         <h5>${film.title}</h5>
                                         <p>${film.release_date}<span>${film.vote_average}</span></p>
