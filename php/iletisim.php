@@ -62,6 +62,11 @@
                             <td>" .$_POST["mail"]. "</td>
                         </tr>
                         <tr>
+                            <td>Cinsiyet</td>
+                            <td>:</td>
+                            <td>" .$_POST["cinsiyet"]. "</td>
+                        </tr>
+                        <tr>
                             <td>Telefon</td>
                             <td>:</td>
                             <td>" .$_POST["telefon"]. "</td>

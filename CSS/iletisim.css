@@ -24,7 +24,8 @@ form {
     flex-direction: column;
 }
 
-form div {
+form div:first-child,
+form div:last-child {
     display: flex;
     gap: 20px;
 }
@@ -41,7 +42,7 @@ form label {
     flex-direction: column;
 }
 
-form input,
+form input:not([type="radio"]),
 form textarea,
 form select,
 form button {
@@ -85,4 +86,40 @@ form .sifirla:hover {
 
 form .gonder:hover {
     background-color: #1851b2ff;
+}
+
+
+form p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--label-renk);
+    flex-basis: 100%;
+    margin: 0;
+}
+
+form .radio {
+    display: flex;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+form .radio label {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: fit-content;
+    border: 3px solid var(--placeholder-border-renk);
+    border-radius: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    background-color: var(--input-bg-renk);
+}
+
+form .radio input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+form .radio input:checked+label {
+    border-color: var(--ana-renk);
 }
