@@ -780,28 +780,28 @@ footer .container p {
     padding-top: var(--ana-padding-top);
 }
 
-.mirasimiz-sayfa .container .box-1 > h1 {
+.mirasimiz-sayfa .container .box-1>h1 {
     text-align: center;
     font-size: 38px;
     font-weight: 800;
     margin-bottom: 30px;
 }
 
-.mirasimiz-sayfa .container .box-1 > h2,
-.mirasimiz-sayfa .container .box-2 > h2 {
+.mirasimiz-sayfa .container .box-1>h2,
+.mirasimiz-sayfa .container .box-2>h2 {
     font-size: 28px;
     font-weight: 600;
 }
 
-.mirasimiz-sayfa .container .box-1 > p,
-.mirasimiz-sayfa .container .box-2 > p {
+.mirasimiz-sayfa .container .box-1>p,
+.mirasimiz-sayfa .container .box-2>p {
     font-size: 17px;
     padding-left: 20px;
     color: var(--text-renk);
 }
 
-.mirasimiz-sayfa .container .box-1 ul > li h3,
-.mirasimiz-sayfa .container .box-2 ul > li h3 {
+.mirasimiz-sayfa .container .box-1 ul>li h3,
+.mirasimiz-sayfa .container .box-2 ul>li h3 {
     font-size: 26px;
     padding-left: 20px;
 }
@@ -810,7 +810,7 @@ footer .container p {
     display: flex;
     align-items: center;
     gap: 20px;
-} 
+}
 
 .mirasimiz-sayfa .container .box-1 ul li ul li:not(:last-child) {
     margin-bottom: 50px;
@@ -859,7 +859,7 @@ footer .container p {
     }
 }
 
-.mirasimiz-sayfa .container .box-2 ul > li p {
+.mirasimiz-sayfa .container .box-2 ul>li p {
     font-size: 17px;
     padding-left: 20px;
     color: var(--text-renk);
@@ -1058,6 +1058,20 @@ footer .container p {
 }
 
 .giris-sayfa div.login form input[type="button"]:hover {
+    background-color: #1851b2ff;
+}
+
+.giris-sayfa div.login form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--ana-renk);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.giris-sayfa div.login form input[type="submit"]:hover {
     background-color: #1851b2ff;
 }
 
