@@ -96,7 +96,6 @@ header {
     /* position: fixed; */
     background-color: white;
     width: 100%;
-    z-index: 10;
 }
 
 header nav .logo {
@@ -114,6 +113,10 @@ header .container nav .navbar-toggler {
 
 header .container nav .navbar-toggler:focus {
     box-shadow: none;
+}
+
+header .container nav .collapse {
+    z-index: 10;
 }
 
 header .container nav div ul li {
@@ -1044,7 +1047,7 @@ footer .container p {
     color: var(--placeholder-renk);
 }
 
-.giris-sayfa div.login form input[type="submit"] {
+.giris-sayfa div.login form input[type="button"] {
     display: block;
     width: 100%;
     background-color: var(--ana-renk);
@@ -1054,7 +1057,7 @@ footer .container p {
     padding: 10px 0;
 }
 
-.giris-sayfa div.login form input[type="submit"]:hover {
+.giris-sayfa div.login form input[type="button"]:hover {
     background-color: #1851b2ff;
 }
 

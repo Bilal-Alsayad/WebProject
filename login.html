@@ -26,13 +26,13 @@
                 <form action="php/login.php" method="post">
                     <div>
                         <label for="mail">Email</label>
-                        <input type="email" name="mail" id="email" placeholder="email@sakarya.edu.tr">
+                        <input type="text" name="mail" id="email" placeholder="email@sakarya.edu.tr">
                     </div>
                     <div>
                         <label for="pass">Parol</label>
                         <input type="password" name="pass" id="password" placeholder="En az 8+ karakter">
                     </div>
-                    <input type="submit" value="Giriş Yap">
+                    <input type="button" class="submit-btn" value="Giriş Yap" onclick="kontrol()">
                 </form>
             </div>
             <div class="img">
@@ -41,6 +41,31 @@
         </section>
     </main>
     <script src="JS/bootstrap.js"></script>
+    <script>
+        function kontrol() {
+            var giris = document.querySelector(".submit-btn");
+            var mail = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            let bosArea = "";
+            if (mail === "") {
+                bosArea += "E-Posta, ";
+            }
+            if (pass === "") {
+                bosArea += "Şifre  ";
+            }
+            if (bosArea) {
+                const trimmedEmptyFields = bosArea.slice(0, -2);
+                alert("Lütfen şu zorunlu alanları doldurun: " + trimmedEmptyFields);
+                return;
+            }
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!re.test(mail)) {
+                alert('Lütfen geçerli bir email adresi giriniz.');
+                return;
+            }
+            giris.setAttribute('type', 'submit')
+        }
+    </script>
 </body>
 
 </html>
