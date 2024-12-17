@@ -1,0 +1,125 @@
+:root {
+    --ana-renk: #1e64dd;
+    --alt-renk: #379ae6;
+    --ikincil-renk: #e2763c;
+    --ucuncu-renk: #e34a64;
+    --dorduncu-renk: #57d1b9;
+    --besinci-renk: #9d69dd;
+    --text-renk: #666;
+    --input-bg-renk: rgb(240, 242, 245);
+    --label-renk: #424856;
+    --placeholder-border-renk: #bdc1caff;
+    --ana-padding-top: 50px;
+    --ana-padding-bottom: 50px;
+    --ana-transition: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form div:first-child,
+form div:last-child {
+    display: flex;
+    gap: 20px;
+}
+
+form div label {
+    width: 100%;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--label-renk);
+    display: flex;
+    flex-direction: column;
+}
+
+form input:not([type="radio"]),
+form textarea,
+form select,
+form button {
+    display: block;
+    border: none;
+    background-color: var(--input-bg-renk);
+    border-radius: 8px;
+    padding: 5px 12px;
+    margin-bottom: 25px;
+    height: 38px;
+    width: 100%;
+}
+
+form textarea {
+    height: 160px;
+    resize: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--placeholder-renk);
+}
+
+form .sifirla,
+form .gonder {
+    width: 50%;
+    color: white;
+}
+
+form .sifirla {
+    background-color: var(--ikincil-renk);
+}
+
+form .gonder {
+    background-color: var(--ana-renk);
+}
+
+form .sifirla:hover {
+    background-color: #da5d1a;
+}
+
+form .gonder:hover {
+    background-color: #1851b2ff;
+}
+
+
+form p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--label-renk);
+    flex-basis: 100%;
+    margin: 0;
+}
+
+form .radio {
+    display: flex;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+form .radio label {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: fit-content;
+    border: 3px solid var(--placeholder-border-renk);
+    border-radius: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    background-color: var(--input-bg-renk);
+}
+
+form .radio input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+form .radio input:checked+label {
+    border-color: var(--ana-renk);
+}

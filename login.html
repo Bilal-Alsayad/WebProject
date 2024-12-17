@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/master.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <title>Giriş</title>
+</head>
+
+<body>
+    <main>
+        <section class="giris-sayfa">
+            <a class="logo" href="index.html">AVCI</a>
+            <div class="login">
+                <h2>Giriş Yap</h2>
+                <form action="php/login.php" method="post">
+                    <div>
+                        <label for="mail">Email</label>
+                        <input type="text" name="mail" id="email" placeholder="email@sakarya.edu.tr">
+                    </div>
+                    <div>
+                        <label for="pass">Parol</label>
+                        <input type="password" name="pass" id="password" placeholder="En az 8+ karakter">
+                    </div>
+                    <input type="button" class="submit-btn" value="Giriş Yap" onclick="kontrol()">
+                </form>
+            </div>
+            <div class="img">
+                <img src="images/Login.png" alt="anahtar">
+            </div>
+        </section>
+    </main>
+    <script src="JS/bootstrap.js"></script>
+    <script>
+        function kontrol() {
+            var giris = document.querySelector(".submit-btn");
+            var mail = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            let bosArea = "";
+            if (mail === "") {
+                bosArea += "E-Posta, ";
+            }
+            if (pass === "") {
+                bosArea += "Şifre  ";
+            }
+            if (bosArea) {
+                const trimmedEmptyFields = bosArea.slice(0, -2);
+                alert("Lütfen şu zorunlu alanları doldurun: " + trimmedEmptyFields);
+                return;
+            }
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!re.test(mail)) {
+                alert('Lütfen geçerli bir email adresi giriniz.');
+                return;
+            }
+            giris.setAttribute('type', 'submit')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/master.css">
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <script>
+        fetch("header.html")
+            .then(response => {
+                return response.text()
+            })
+            .then(data => {
+                document.querySelector("header").innerHTML = data;
+            });
+
+        fetch("footer.html")
+            .then(response => {
+                return response.text()
+            })
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+            });
+    </script>
+    <title>Ana Sayfa</title>
+</head>
+
+<body>
+
+    <main>
+        <header></header>
+        <section class="landing">
+            <div class="container">
+                <div class="info">
+                    <h1>Merhaba! Ben Bilal, Öğrenciyim</h1>
+                    <P>Sakarya Üniversitesi'nde bilgisayar mühendisliği okuyorum</P>
+                </div>
+                <div class="img">
+                    <img src="images/Developer activity-bro.png" alt="fotoğraf">
+                </div>
+            </div>
+        </section>
+        <section class="projelerim">
+            <div class="title">
+                <h2 class="ana-title">Son Projelerim</h2>
+                <img src="images/lines.svg" alt="çizgiler">
+            </div>
+            <div class="container">
+                <div class="box">
+                    <img src="images/Proje1.png" alt="site-1">
+                    <div class="info">
+                        <h3>Proje 1</h3>
+                        <p>Leon<br><span>HTML, CSS</span></p>
+                        <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-1.git"
+                            target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                        <a class="visit btn" href="https://bilal-alsayad.github.io/Template-1/" target="_blank">Siteye<i
+                                class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/Proje2.png" alt="site-2">
+                    <div class="info">
+                        <h3>Proje 2</h3>
+                        <p>Kasper<br><span>HTML, CSS</span></p>
+                        <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-2.git"
+                            target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                        <a class="visit btn" href="https://bilal-alsayad.github.io/Template-2/" target="_blank">Siteye<i
+                                class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/Proje3.png" alt="site-3">
+                    <div class="info">
+                        <h3>Proje 3</h3>
+                        <p>Elzero<br><span>HTML, CSS</span></p>
+                        <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-3.git"
+                            target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                        <a class="visit btn" href="https://bilal-alsayad.github.io/Template-3/" target="_blank">Siteye<i
+                                class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/Proje4.png" alt="site-3">
+                    <div class="info">
+                        <h3>Proje 4</h3>
+                        <p>Elzero<br><span>HTML, CSS</span></p>
+                        <a class="git-hub btn" href="https://github.com/Bilal-Alsayad/Template-4.git"
+                            target="_blank">GitHub<i class="fa-brands fa-github"></i></a>
+                        <a class="visit btn" href="https://bilal-alsayad.github.io/Template-4/" target="_blank">Siteye<i
+                                class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="beceriler">
+            <div class="title">
+                <h2 class="ana-title">Beceriler</h2>
+                <img src="images/lines.svg" alt="çizgiler">
+            </div>
+            <div class="container">
+                <div class="box">
+                    <i class="fa-solid fa-people-group fa-2x"></i>
+                    <p>Takım Çalışması</p>
+                </div>
+                <div class="box">
+                    <i class="fa-regular fa-clock fa-2x"></i>
+                    <p>Zaman Yönetimi</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-gears fa-2x"></i>
+                    <p>Analitik Düşünme</p>
+                </div>
+                <div class="box">
+                    <i class="fa-regular fa-comments fa-2x"></i>
+                    <p>İletişim</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+                    <p>Öğrenme Becerisi</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-briefcase fa-2x"></i>
+                    <p>Stres Altında Çalışabilme</p>
+                </div>
+            </div>
+        </section>
+        <section class="hobiler">
+            <div class="title">
+                <h2 class="ana-title">Hobiler</h2>
+                <img src="images/lines.svg" alt="çizgiler">
+            </div>
+            <div class="container">
+                <div class="box">
+                    <i class="fa-solid fa-futbol fa-2x"></i>
+                    <p>Futbol</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-person-swimming fa-2x"></i>
+                    <p>Yüzmek</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-book-open-reader fa-2x"></i>
+                    <p>Kitap Okumak</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="JS/bootstrap.js"></script>
+</body>
+
+</html>
